@@ -43,6 +43,11 @@ you should see:
     block drop log from any to <emerging_threats>
 
 
+test that the table has been populated:
+
+        $ sudo pfctl -a 'emerging-threats' -t 'emerging_threats' -Tshow
+
+
 ## setup monitoring
 
 
