@@ -3,9 +3,9 @@
 ## initial setup
 
 
-append the contents of [pf.conf](../etc/pf.conf) to the file `/etc/pf.conf`
+append the contents of [pf.conf](/etc/pf.conf) to the file `/etc/pf.conf`
 
-copy the file [emerging-threats](../etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/`
+copy the file [emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/`
 
 copy [update-et.sh](/update-et.sh) to the home dir of the user who will run the script
 
