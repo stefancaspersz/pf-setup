@@ -54,4 +54,4 @@ test that the table has been populated:
 run the following commands to setup the logging interface and monitor the logging interface on the console:
 
     $ sudo ifconfig pflog0 create
-    $ sudo tcpdump -n -e -ttt -i pflog0`
+    $ sudo tcpdump -n -e -ttt -i pflog0
