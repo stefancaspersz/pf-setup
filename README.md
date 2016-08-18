@@ -27,6 +27,11 @@ alternatively you could execute the follwing commands in sequence:
     sudo chmod 644 /etc/emerging-Block-IPs.txt
 
 
+test the config prior to rebooting:
+
+    sudo pfctl -v -n -f /etc/pf.conf
+    
+
 ## reboot
 
 
