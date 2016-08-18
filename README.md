@@ -40,8 +40,11 @@ test that that pf has picked up the new rule set:
 you should see:
 
 `No ALTQ support in kernel`
+
 `ALTQ related functions disabled`
+
 `block drop log from <emerging_threats> to any`
+
 `block drop log from any to <emerging_threats>`
 
 
