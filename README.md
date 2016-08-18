@@ -1,10 +1,13 @@
 # pf-emerging-threats
 
+## initial setup
 
-copy all the files in the repository to the absolute paths as spcified.
 
+append the contents of [pf.conf](../etc/pf.conf) to the file `/etc/pf.conf`
 
-copy update-et.sh to the home dir of the user who will run the script
+copy the file [emerging-threats](../etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/`
+
+copy [update-et.sh](/update-et.sh) to the home dir of the user who will run the script
 
 
 make the script executable:
@@ -25,3 +28,15 @@ alternatively you could execute the follwing commands in sequence:
 
 `sudo chmod 644 /etc/emerging-Block-IPs.txt`
 
+
+## reboot
+
+
+## setup monitoring
+
+
+run the following commands to setup the logging interface and monitor the logging interface on the console:
+
+`sudo ifconfig pflog0 create`
+
+`sudo tcpdump -n -e -ttt -i pflog0`
