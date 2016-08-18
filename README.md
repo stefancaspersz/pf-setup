@@ -45,7 +45,7 @@ you should see:
 
 test that the table has been populated:
 
-        $ sudo pfctl -a 'emerging-threats' -t 'emerging_threats' -Tshow
+    $ sudo pfctl -a 'emerging-threats' -t 'emerging_threats' -Tshow
 
 
 ## setup monitoring
