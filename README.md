@@ -29,7 +29,7 @@ alternatively you could execute the follwing commands in sequence:
 
 test the config prior to rebooting:
 
-    sudo pfctl -v -n -f /etc/pf.conf
+    $ sudo pfctl -v -n -f /etc/pf.conf
     
 
 ## reboot
