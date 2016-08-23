@@ -1,3 +1,2 @@
 table <emerging_threats> persist file "/etc/emerging-Block-IPs.txt"
-block log quick from <emerging_threats>
 block log quick to <emerging_threats>
