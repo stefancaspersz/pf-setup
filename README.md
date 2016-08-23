@@ -63,3 +63,8 @@ run the following commands to setup the logging interface and monitor the loggin
 
     $ sudo ifconfig pflog0 create
     $ sudo tcpdump -n -e -ttt -i pflog0
+    
+    
+destroy the interface when done:
+
+    $ sudo ifconfig pflog0 destroy
