@@ -25,7 +25,7 @@ alternatively you could execute the follwing commands in sequence:
     curl http://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt -o /tmp/emerging-Block-IPs.txt
     sudo cp /tmp/emerging-Block-IPs.txt /etc
     sudo chmod 644 /etc/emerging-Block-IPs.txt
-
+    rm /tmp/emerging-Block-IPs.txt
 
 test the config prior to rebooting:
 
