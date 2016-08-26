@@ -68,3 +68,9 @@ run the following commands to setup the logging interface and monitor the loggin
 destroy the interface when done:
 
     $ sudo ifconfig pflog0 destroy
+
+
+## credits
+
+	https://discussions.apple.com/thread/3346500?tstart=0
+	https://ikawnoclast.com/security/mac-os-x-pf-firewall-avoiding-known-bad-guys/
