@@ -1,4 +1,4 @@
-# pf-emerging-threats
+# pf-setup
 
 ## initial setup
 
@@ -56,18 +56,47 @@ test that the table has been populated:
     $ sudo pfctl -a 'emerging-threats' -t 'emerging_threats' -Tshow
 
 
-## setup monitoring
+## setup logging to file
+
+# syslogd configuration
+
+append the following lines to [asl.conf](/etc/asl.conf) to the file `/etc/asl.conf`
+
+gently restart the syslogd
+
+    $ sudo killall -HUP syslogd
 
 
-run the following commands to setup the logging interface and monitor the logging interface on the console:
+# pflogd missing in Mac OS X
 
-    $ sudo ifconfig pflog0 create
-    $ sudo tcpdump -n -e -ttt -i pflog0
-    
-    
-destroy the interface when done:
+copy [pflog.sh](pflog.sh) to `/opt/pf`
 
-    $ sudo ifconfig pflog0 destroy
+copy [pflog.plist](pflog.plist) to `/Library/LaunchDaemons/pflog.plist`
+
+load the launch config
+
+    $ sudo launchctl load /Library/LaunchDaemons/pflog.plist
+
+
+check that the config has loaded and started 
+
+    $ sudo launchctl list | grep pflog
+
+    8271	0	pflog
+
+
+check that the interface pflog0 has been created
+
+    $ ifconfig pflog0
+
+    pflog0: flags=141<UP,RUNNING,PROMISC> mtu 33080
+
+
+check that the logger is running
+
+    $ ps aux | grep logger
+
+    root             8274   0.0  0.0  2437900    712   ??  S     3:51PM   0:00.01 /usr/bin/logger -t pf -p 6
 
 
 ## credits

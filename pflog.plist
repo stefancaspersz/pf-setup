@@ -6,7 +6,7 @@
         		<string>pflog</string>
         	<key>ProgramArguments</key>
                		<array>
-                        	<string>/Users/stefan.caspersz/pf-emerging-threats/pflog.sh</string>
+                        	<string>/opt/pf/pflog.sh</string>
                 	</array>
         	<key>Disabled</key>
 			<false/>
