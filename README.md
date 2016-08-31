@@ -56,9 +56,9 @@ test that the table has been populated:
     $ sudo pfctl -a 'emerging-threats' -t 'emerging_threats' -Tshow
 
 
-## setup logging to file
+## setup logging to file /var/log/pf.log
 
-# syslogd configuration
+### syslogd configuration
 
 append the following lines to [asl.conf](/etc/asl.conf) to the file `/etc/asl.conf`
 
@@ -67,9 +67,14 @@ gently restart the syslogd
     $ sudo killall -HUP syslogd
 
 
-# pflogd missing in Mac OS X
+### pflogd missing in Mac OS X
 
-copy [pflog.sh](pflog.sh) to `/opt/pf`
+copy [pflog.sh](pflog.sh) to `/opt/pf/pflog.sh`
+
+make the script executable:
+
+    $ sudo chmod 744 /opt/pf/pflog.sh
+
 
 copy [pflog.plist](pflog.plist) to `/Library/LaunchDaemons/pflog.plist`
 
@@ -99,7 +104,10 @@ check that the logger is running
     root             8274   0.0  0.0  2437900    712   ??  S     3:51PM   0:00.01 /usr/bin/logger -t pf -p 6
 
 
-## credits
+you should now see the log file created and being written to `/var/log/pf.log`
+
+
+# credits
 
 	https://discussions.apple.com/thread/3346500?tstart=0
 	https://ikawnoclast.com/security/mac-os-x-pf-firewall-avoiding-known-bad-guys/
