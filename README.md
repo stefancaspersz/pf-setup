@@ -9,7 +9,7 @@ copy the file /etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threat
 
 copy the file /etc/pf.anchors/[rea_corp](/etc/pf.anchors/rea_corp) to `/etc/pf.anchors/rea_corp`
 
-copy the file /etc/[rea_dc.txt](/etc/rea_dc.txt) to `/etc/rea_dc.txt`
+{removed due to sensitive data} copy the file /etc/[rea_dc.txt](/etc/rea_dc.txt) to `/etc/rea_dc.txt`
 
 copy [update-et.sh](update-et.sh) to the home dir of the user who will run the script
 
