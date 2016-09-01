@@ -1,0 +1,15 @@
+table <rea_dc> const file "/etc/rea_dc.txt"
+# DNS
+pass out log proto {tcp udp} to <rea_dc> port 53
+# LDAP
+pass out log proto {tcp} to <rea_dc> port 389 
+# kerberos
+pass out log proto {tcp udp} to <rea_dc> port 88 
+# NTP 
+pass out log proto {udp} to <rea_dc> port 123 
+# nessus agent needs to talk to the nessus manager on TCP 8834
+pass out log proto {tcp} to 54.206.100.225 port 8834
+# rea kaspersky client-server on TCP 13000
+pass out log proto {tcp} to 10.129.148.33 port 13000
+# rea jss casper
+pass out log proto {tcp} to 10.129.148.48 port 8443
