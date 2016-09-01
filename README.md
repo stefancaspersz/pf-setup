@@ -3,9 +3,13 @@
 ## initial setup
 
 
-append the contents of [pf.conf](/etc/pf.conf) to the file `/etc/pf.conf`
+copy the file /etc/[pf.conf](/etc/pf.conf) to `/etc/pf.conf`
 
-copy the file [emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/`
+copy the file /etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/emerging-threats`
+
+copy the file /etc/pf.anchors/[rea_corp](/etc/pf.anchors/rea_corp) to `/etc/pf.anchors/rea_corp`
+
+copy the file /etc/[rea_dc.txt](/etc/rea_dc.txt) to `/etc/rea_dc.txt`
 
 copy [update-et.sh](update-et.sh) to the home dir of the user who will run the script
 
@@ -43,6 +47,8 @@ test that that pf has picked up the new rule set:
 
     $ sudo pfctl -a 'emerging-threats' -sr
 
+    $ sudo pfctl -a 'rea_corp' -sr
+
 
 you should see:
 
@@ -60,7 +66,7 @@ test that the table has been populated:
 
 ### syslogd configuration
 
-append the following lines to [asl.conf](/etc/asl.conf) to the file `/etc/asl.conf`
+copy the file [pflog](/etc/asl/pflog) to `/etc/asl/pflog`
 
 gently restart the syslogd
 
