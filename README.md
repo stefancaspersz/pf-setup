@@ -10,7 +10,6 @@ copy the file /etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threat
 
 copy [update-et.sh](update-et.sh) to the home dir of the user who will run the script or to `/opt/pf/update-et.sh`
 
-
 make the script executable:
 
 	$ chmod 644 update-et.sh
