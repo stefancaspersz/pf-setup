@@ -8,7 +8,7 @@ copy the file /etc/[pf.conf](/etc/pf.conf) to `/etc/pf.conf`
 
 copy the file /etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/emerging-threats`
 
-copy [update-et.sh](update-et.sh) to the home dir of the user who will run the script or to `/opt/pf/update-et.sh`
+copy /opt/pf/[update-et.sh](/opt/pf/update-et.sh) to the home dir of the user who will run the script or to `/opt/pf/update-et.sh`
 
 make the script executable:
 
