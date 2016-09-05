@@ -12,7 +12,7 @@ copy [update-et.sh](update-et.sh) to the home dir of the user who will run the s
 
 make the script executable:
 
-	$ chmod 644 update-et.sh
+	$ chmod 644 /opt/pf/update-et.sh
 
 
 run the update script to fetch the latest version of emerging-Block-IPs.txt:
