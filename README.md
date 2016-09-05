@@ -9,14 +9,14 @@ copy the file /etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threat
 
 copy the file /etc/pf.anchors/[rea_corp](/etc/pf.anchors/rea_corp) to `/etc/pf.anchors/rea_corp`
 
-{removed due to sensitive data} copy the file /etc/[rea_dc.txt](/etc/rea_dc.txt) to `/etc/rea_dc.txt`
+copy the file /etc/[rea_dc.txt](/etc/rea_dc.txt) to `/etc/rea_dc.txt`
 
 copy [update-et.sh](update-et.sh) to the home dir of the user who will run the script
 
 
 make the script executable:
 
-    $ chmod 744 update-et.sh
+    $ chmod 655 update-et.sh
 
 
 run the update script to fetch the latest version of emerging-Block-IPs.txt:
@@ -79,7 +79,7 @@ copy [pflog.sh](pflog.sh) to `/opt/pf/pflog.sh`
 
 make the script executable:
 
-    $ sudo chmod 744 /opt/pf/pflog.sh
+    $ sudo chmod 655 /opt/pf/pflog.sh
 
 
 copy [pflog.plist](pflog.plist) to `/Library/LaunchDaemons/pflog.plist`
