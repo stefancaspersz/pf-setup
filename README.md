@@ -12,7 +12,7 @@ copy /opt/pf/[update-et.sh](/opt/pf/update-et.sh) to the home dir of the user wh
 
 make the script executable:
 
-	$ chmod 644 /opt/pf/update-et.sh
+	$ chmod 540 /opt/pf/update-et.sh
 
 
 run the update script to fetch the latest version of emerging-Block-IPs.txt:
@@ -105,7 +105,7 @@ copy [pflog.sh](pflog.sh) to `/opt/pf/pflog.sh`
 
 make the script executable:
 
-	$ sudo chmod 644 /opt/pf/pflog.sh
+	$ sudo chmod 540 /opt/pf/pflog.sh
 
 
 copy [pflog.plist](pflog.plist) to `/Library/LaunchDaemons/pflog.plist`
