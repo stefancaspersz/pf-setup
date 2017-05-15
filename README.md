@@ -68,12 +68,12 @@ Restart your Mac
 ## reboot
 
 
-test that that pf has picked up the new rule set:
+test that pf has picked up the new rule set:
 
-	$ sudo pfctl -a 'emerging-threats' -sr
+	$ sudo pfctl -sr
 
 
-you should see:
+you should see the rules listed such as:
 
 	No ALTQ support in kernel
 	ALTQ related functions disabled
