@@ -1,4 +1,0 @@
-# logging for pf firewall 
-#
-> /var/log/pf.log mode=0640 compress format=std rotate=seq file_max=5M all_max=20M
-? [CA= Sender pf] file /var/log/pf.log
