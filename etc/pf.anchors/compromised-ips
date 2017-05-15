@@ -1,0 +1,2 @@
+table <compromised_ips> persist file "/opt/pf/compromised-ips.txt"
+block out log quick to <compromised_ips>
