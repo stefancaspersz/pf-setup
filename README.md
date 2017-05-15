@@ -85,58 +85,12 @@ test that the table has been populated:
 	$ sudo pfctl -a 'emerging-threats' -t 'emerging_threats' -Tshow
 
 
-## setup logging to file /var/log/pf.log
 
+## Create the pflog0 interface
 
-### syslogd configuration
+	$ sudo ifconfig pflog0 create
 
-
-copy the file [rea.pflog](/etc/asl/rea.pflog) to `/etc/asl/rea.pflog`
-
-gently restart the syslogd
-
-	$ sudo killall -HUP syslogd
-
-
-### pflogd missing in Mac OS X
-
-
-copy [pflog.sh](pflog.sh) to `/opt/pf/pflog.sh`
-
-make the script executable:
-
-	$ sudo chmod 540 /opt/pf/pflog.sh
-
-
-copy [pflog.plist](pflog.plist) to `/Library/LaunchDaemons/pflog.plist`
-
-load the launch config
-
-	$ sudo launchctl load /Library/LaunchDaemons/pflog.plist
-
-
-check that the config has loaded and started 
-
-	$ sudo launchctl list | grep pflog
-
-	8271	0	pflog
-
-
-check that the interface pflog0 has been created
-
-	$ ifconfig pflog0
-
-	pflog0: flags=141<UP,RUNNING,PROMISC> mtu 33080
-
-
-check that the logger is running
-
-	$ ps aux | grep logger
-
-	root             8274   0.0  0.0  2437900    712   ??  S     3:51PM   0:00.01 /usr/bin/logger -t pf -p 6
-
-
-you should now see the log file created and being written to `/var/log/pf.log`
+Use a tool such as Wireshark to view the log entries written to pflog0
 
 
 # reference/credits
