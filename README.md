@@ -1,9 +1,8 @@
 # pf-setup
+## Install.sh
+Script is not yet tested
 
-
-## initial setup
-
-
+## Initial setup
 copy the file etc/[pf.conf](/etc/pf.conf) to `/etc/pf.conf`
 
 copy the file etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/emerging-threats`
@@ -38,7 +37,7 @@ load the config and enable the pf firewall:
 	$ sudo pfctl -f -e /etc/pf.conf
 
 
-### auto-start pf firewall on boot up
+### Auto-start pf firewall on boot up
 Some paths and applications in El Capitan are protected by System Integrity Protection. Even root can't modify the files. You first have to disable SIP before editing or modifying them.
 
 Reboot your Mac to Recovery Mode by restarting your computer and holding down `Command` `R` until the Apple logo appears on your screen.
@@ -62,7 +61,7 @@ In the Terminal window, enter in `csrutil enable` and press Enter.
 Restart your Mac
 
 
-## reboot
+## Reboot
 
 
 test that pf has picked up the new rule set:
