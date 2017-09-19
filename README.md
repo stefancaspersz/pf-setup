@@ -4,23 +4,21 @@
 ## initial setup
 
 
-copy the file /etc/[pf.conf](/etc/pf.conf) to `/etc/pf.conf`
+copy the file etc/[pf.conf](/etc/pf.conf) to `/etc/pf.conf`
 
-copy the file /etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/emerging-threats`
+copy the file etc/pf.anchors/[emerging-threats](/etc/pf.anchors/emerging-threats) to `/etc/pf.anchors/emerging-threats`
 
-copy /opt/pf/[update-et.sh](/opt/pf/update-et.sh) to the home dir of the user who will run the script or to `/opt/pf/update-et.sh`
+copy opt/pf/[update-et.sh](/opt/pf/update-et.sh) to the home dir of the user who will run the script or to `/opt/pf/update-et.sh`
 
 make the script executable:
 
 	$ chmod 540 /opt/pf/update-et.sh
 
-
 run the update script to fetch the latest version of emerging-Block-IPs.txt:
 
 	$ sudo /opt/pf/update-et.sh
 
-
-alternatively you could execute the follwing commands in sequence:
+Alternatively you could execute the following commands in sequence:
 
 	curl http://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt -o /tmp/emerging-Block-IPs.txt
 	sudo cp /tmp/emerging-Block-IPs.txt /opt/pf
@@ -39,10 +37,7 @@ load the config and enable the pf firewall:
 
 
 ### auto-start pf firewall on boot up
-
-
 Some paths and applications in El Capitan are protected by System Integrity Protection. Even root can't modify the files. You first have to disable SIP before editing or modifying them.
-
 
 Reboot your Mac to Recovery Mode by restarting your computer and holding down `Command` `R` until the Apple logo appears on your screen.
 
