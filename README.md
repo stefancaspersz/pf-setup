@@ -35,7 +35,7 @@ test the config prior to rebooting:
     
 load the config and enable the pf firewall:
 
-	$ sudo pfctl -f -e /etc/pf.conf
+	$ sudo pfctl -e -f /etc/pf.conf
 
 
 ### auto-start pf firewall on boot up
@@ -77,7 +77,9 @@ you should see the rules listed such as:
 
 	No ALTQ support in kernel
 	ALTQ related functions disabled
-	block drop log from any to <emerging_threats>
+	scrub-anchor "com.apple/*" all fragment reassemble
+	anchor "com.apple/*" all
+	anchor "emerging-threats" all
 
 
 test that the table has been populated:
