@@ -7,5 +7,5 @@ cp opt/pf/update-et.sh ~/scripts/pf/update-et.sh
 chmod 540 ~/scripts/pf/update-et.sh
 sh ~/scripts/pf/update-et.sh
 pfctl -v -n -f /etc/pf.conf
-pfctl -f -e /etc/pf.conf
+pfctl -e -f /etc/pf.conf
 ifconfig pflog0 create
